@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trial 2 – The Prodigy’s Puzzle</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: 'Georgia', serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    #unlockSection {
+      margin-top: 30px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 250px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #444;
+      color: white;
+      border: none;
+    }
+
+    #result {
+      margin-top: 20px;
+      display: none;
+    }
+
+    a {
+      color: #80dfff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎾 Trial 2: The Prodigy’s Puzzle</h1>
+  <p>
+    A champion hides in plain sight. Complete the puzzle to discover his name.  
+    When you know it, type it below to advance.
+  </p>
+
+  <!-- Puzzle Thumbnail -->
+  <div style="text-align: center; margin-top: 20px;">
+    <span style="display:inline-block;margin:1em;width:160px;text-align:center">
+      <a href="https://www.jigsawplanet.com/?rc=play&amp;pid=3a44cde6fb46" style="display:inline-block;position:relative" target="_blank">
+        <img alt="preview" style="display:block;box-shadow:2px 2px 4px rgba(0,0,0,.4)" src="https://im.jigsawplanet.com/?rc=img&amp;pid=3a44cde6fb46&amp;size=160">
+        <span style="position:absolute;right:4px;bottom:4px;font:bold 120% Verdana,sans-serif;white-space:nowrap;filter:drop-shadow(1px 1px 2px #000)">
+          <span style="color:#fff;vertical-align:middle">16</span>
+          <img style="width:1.5em;height:1.5em;vertical-align:middle" src="https://www.jigsawplanet.com/img/shapes/10.svg" alt="piece">
+        </span>
+      </a>
+      <a style="display:block;margin-top:.2em;overflow-wrap:break-word" href="https://www.jigsawplanet.com/?rc=play&amp;pid=3a44cde6fb46" target="_blank">🧩 Solve Puzzle</a>
+    </span>
+  </div>
+
+  <!-- Password Unlock -->
+  <div id="unlockSection">
+    <p>Enter the name of the tennis prodigy:</p>
+    <input type="text" id="passwordInput" placeholder="Enter name">
+    <button onclick="checkAnswer()">Submit</button>
+    <div id="result">
+      ✅ Correct. The next court awaits:<br>
+      <a href="trial3.html">➡️ Proceed to Trial 3</a>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById('passwordInput').value.trim().toLowerCase();
+      const correctPassword = "ryoma";
+
+      if (input === correctPassword) {
+        document.getElementById('result').style.display = "block";
+      } else {
+        alert("That name doesn't echo across the court. Try again.");
+      }
+    }
+  </script>
+
+</body>
+</html>
+
